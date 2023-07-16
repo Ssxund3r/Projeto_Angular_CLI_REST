@@ -3,15 +3,18 @@
 		<h3>Login - Projeto Angular 2 CLI - Rest</h3>
 	</div>
 	<div>
-		<label for="user">E-mail:</label>
-		<input type="email" class="form-control" id="user" 
-			placeholder="Informe o E-mail" required>
+		<label for="login">Login:</label>
+		<input type="text" class="form-control" id="login" 
+			placeholder="Informe o Usuário" name="login" [(ngModel)]= "usuario.login" 
+			required >
 	</div>
 	<div>
 		<label for="senha">Senha:</label>
 		<input type="password" class="form-control" id="senha" 
-			placeholder="Informa a Senha" required>
+			placeholder="Informe a Senha" name="senha" [(ngModel)]= "usuario.senha" 
+			required >
 	</div>
 	<br>
-	<button type="button" class="btn btn-primary" id="acessar">Acessar</button>
+	<button type="button" class="btn btn-primary" 
+	id="acessar" (click)="login()">Acessar</button>
 </form>
