@@ -1,0 +1,20 @@
+<form>
+	<div>
+		<h3>Login - Projeto Angular 2 CLI - Rest</h3>
+	</div>
+	<div> 
+		<label for="login">Login:</label>
+		<input type="text" class="form-control" id="login" 
+			placeholder="Informe o Usuário" name="login" [(ngModel)]= "usuario.login" 
+			required >
+	</div>
+	<div>
+		<label for="senha">Senha:</label>
+		<input type="password" class="form-control" id="senha" 
+			placeholder="Informe a Senha" name="senha" [(ngModel)]= "usuario.senha" 
+			required >
+	</div>
+	<br>
+	<button type="button" class="btn btn-primary" 
+	id="acessar" (click)="login()">Acessar</button>
+</form>

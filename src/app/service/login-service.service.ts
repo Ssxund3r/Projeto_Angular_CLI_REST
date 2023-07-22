@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AppConstants } from '../app-constants';
+import {Router} from '@angular/router';
 
 
 @Injectable({
@@ -8,7 +9,7 @@ import { AppConstants } from '../app-constants';
 })
 export class LoginServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router : Router) { }
   
   
   	login(usuario: { login: string; senha: string; }){
@@ -20,6 +21,10 @@ export class LoginServiceService {
         localStorage.setItem("token", token);
         
         //console.info("Token: " + localStorage.getItem("token"));
+        
+        this.router.navigate(['home']);
+        
+        
       },
 		  (error: Error) => {
 			  console.error("Credenciais Inválidas! ", error);
