@@ -11,7 +11,7 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
   getStudentList(): Observable<any> {
-    return this.http.get<any>(AppConstants.bas"eUrl);
+    return this.http.get<any>(AppConstants.baseUrl);
   }
 
 }
